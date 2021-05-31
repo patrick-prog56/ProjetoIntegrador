@@ -18,7 +18,7 @@ public class Tema {
 	private long id;
 	
 	@NotNull
-	@Size(min = 3 , max = 255)
+	@Size(min = 3 , max = 500)
 	private String nome_tema;
 	
 	@NotNull
