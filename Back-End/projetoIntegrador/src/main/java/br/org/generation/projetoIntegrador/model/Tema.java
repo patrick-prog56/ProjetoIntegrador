@@ -12,22 +12,21 @@ import javax.validation.constraints.Size;
 @Table(name = "tb_tema")
 public class Tema {
 	
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
 	@NotNull
 	@Size(min = 3 , max = 255)
-	private String nome_tema;
+	private String nomeTema; //nome dos temas
 	
 	@NotNull
 	@Size(min = 3 , max = 500)
-	private String descricao_tema;
+	private String descricaoTema;
 	
 	@NotNull
 	@Size(min = 3 , max = 255)
-	private String palavras_chave;
+	private String palavrasChaveTema;
 
 	public long getId() {
 		return id;
@@ -37,30 +36,27 @@ public class Tema {
 		this.id = id;
 	}
 
-	public String getNome_tema() {
-		return nome_tema;
+	public String getNomeTema() {
+		return nomeTema;
 	}
 
-	public void setNome_tema(String nome_tema) {
-		this.nome_tema = nome_tema;
+	public void setNomeTema(String nomeTema) {
+		this.nomeTema = nomeTema;
 	}
 
-	public String getDescricao_tema() {
-		return descricao_tema;
+	public String getDescricaoTema() {
+		return descricaoTema;
 	}
 
-	public void setDescricao_tema(String descricao_tema) {
-		this.descricao_tema = descricao_tema;
+	public void setDescricaoTema(String descricaoTema) {
+		this.descricaoTema = descricaoTema;
 	}
 
-	public String getPalavras_chave() {
-		return palavras_chave;
+	public String getPalavrasChaveTema() {
+		return palavrasChaveTema;
 	}
 
-	public void setPalavras_chave(String palavras_chave) {
-		this.palavras_chave = palavras_chave;
+	public void setPalavrasChaveTema(String palavrasChaveTema) {
+		this.palavrasChaveTema = palavrasChaveTema;
 	}
-	
-
-	
 }
