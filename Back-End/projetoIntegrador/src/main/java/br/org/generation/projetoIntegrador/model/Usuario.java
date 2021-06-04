@@ -9,34 +9,39 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "tb_tema")
-public class Tema {
+@Table (name = "tb_usuario")
+public class Usuario {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
 	@NotNull
-	@Size(min = 3 , max = 255)
-	private String nomeTema; //nome dos temas
+	@Size(max=255)
+	private String nomeCompleto;
 	
 	@NotNull
-	@Size(min = 3 , max = 500)
-	private String descricaoTema;
+	@Size(max=255)
+	@Email
+	private String email;
 	
 	@NotNull
-	@Size(min = 3 , max = 255)
-	private String palavrasChaveTema;
+	@Size(max=255)
+	private String nomeUsuario;
 	
+	@NotNull
+	@Size(max=255)
+	private String senha;
 	
-	@OneToMany(mappedBy = "tema", cascade= CascadeType.ALL)
-	@JsonIgnoreProperties("tema")
+	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+	@JsonIgnoreProperties("usuario")
 	private List<Postagem> postagem;
 	
 	
@@ -49,28 +54,36 @@ public class Tema {
 		this.id = id;
 	}
 
-	public String getNomeTema() {
-		return nomeTema;
+	public String getNomeCompleto() {
+		return nomeCompleto;
 	}
 
-	public void setNomeTema(String nomeTema) {
-		this.nomeTema = nomeTema;
+	public void setNomeCompleto(String nomeCompleto) {
+		this.nomeCompleto = nomeCompleto;
 	}
 
-	public String getDescricaoTema() {
-		return descricaoTema;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setDescricaoTema(String descricaoTema) {
-		this.descricaoTema = descricaoTema;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getPalavrasChaveTema() {
-		return palavrasChaveTema;
+	public String getNomeUsuario() {
+		return nomeUsuario;
 	}
 
-	public void setPalavrasChaveTema(String palavrasChaveTema) {
-		this.palavrasChaveTema = palavrasChaveTema;
+	public void setNomeUsuario(String nomeUsuario) {
+		this.nomeUsuario = nomeUsuario;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 
 	public List<Postagem> getPostagem() {
@@ -80,6 +93,12 @@ public class Tema {
 	public void setPostagem(List<Postagem> postagem) {
 		this.postagem = postagem;
 	}
+
 	
 	
+	
+	
+	
+	
+
 }
