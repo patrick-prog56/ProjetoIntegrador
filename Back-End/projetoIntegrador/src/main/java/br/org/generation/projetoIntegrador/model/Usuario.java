@@ -34,7 +34,7 @@ public class Usuario {
 	
 	@NotNull
 	@Size(max=255)
-	private String nomeUsuario;
+	private String usuario;
 	
 	@NotNull
 	@Size(max=255)
@@ -68,12 +68,14 @@ public class Usuario {
 		this.email = email;
 	}
 
-	public String getNomeUsuario() {
-		return nomeUsuario;
+	
+
+	public String getUsuario() {
+		return usuario;
 	}
 
-	public void setNomeUsuario(String nomeUsuario) {
-		this.nomeUsuario = nomeUsuario;
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
 	public String getSenha() {

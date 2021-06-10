@@ -17,14 +17,14 @@ import br.org.generation.projetoIntegrador.service.UsuarioService;
 
 @RestController
 @RequestMapping("/usuarios")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins =  "*", allowedHeaders = "*")
 public class ControllerUsuario {
 	
 	@Autowired
 	private UsuarioService usuarioService;
 	
 	@PostMapping("/logar")
-	public ResponseEntity<UserLogin> Authentication(@RequestBody Optional<UserLogin> user) {
+	public ResponseEntity<UserLogin> autentication(@RequestBody Optional<UserLogin>user) {
 		return usuarioService.Logar(user).map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
 	}
