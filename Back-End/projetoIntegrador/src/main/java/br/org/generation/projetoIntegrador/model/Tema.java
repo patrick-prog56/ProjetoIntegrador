@@ -38,8 +38,6 @@ public class Tema {
 	@OneToMany(mappedBy = "tema", cascade= CascadeType.ALL)
 	@JsonIgnoreProperties("tema")
 	private List<Postagem> postagem;
-	
-	
 
 	public long getId() {
 		return id;
@@ -80,6 +78,5 @@ public class Tema {
 	public void setPostagem(List<Postagem> postagem) {
 		this.postagem = postagem;
 	}
-	
 	
 }
