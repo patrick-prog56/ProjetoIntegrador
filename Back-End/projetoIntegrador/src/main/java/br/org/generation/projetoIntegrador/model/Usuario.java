@@ -40,6 +40,12 @@ public class Usuario {
 	@Size(max=255)
 	private String senha;
 	
+	@NotNull
+	private boolean pfSaude;
+	
+	@Size(min=3)
+	private String numRegistro;
+	
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("usuario")
 	private List<Postagem> postagem;
@@ -93,5 +99,22 @@ public class Usuario {
 	public void setPostagem(List<Postagem> postagem) {
 		this.postagem = postagem;
 	}
+
+	public boolean isPfSaude() {
+		return pfSaude;
+	}
+
+	public void setPfSaude(boolean pfSaude) {
+		this.pfSaude = pfSaude;
+	}
+
+	public String getNumRegistro() {
+		return numRegistro;
+	}
+
+	public void setNumRegistro(String numRegistro) {
+		this.numRegistro = numRegistro;
+	}
+	
 
 }
