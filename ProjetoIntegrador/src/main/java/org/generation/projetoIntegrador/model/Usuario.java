@@ -86,11 +86,11 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-    public String gettipoUsuario() {
+    public String getTipoUsuario() {
         return tipoUsuario;
     }
 
-    public void settipoUsuario(String pfSaude) {
+    public void setTipoUsuario(String pfSaude) {
         this.tipoUsuario = pfSaude;
     }
 
