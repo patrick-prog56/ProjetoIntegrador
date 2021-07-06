@@ -27,10 +27,6 @@ public class Postagem {
 	@Size(min = 5, max = 100)
 	private String conteudoPostagem;
 
-	@NotNull
-	@Size(min = 5, max = 500)
-	private String conteudo;
-
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date criadoEm = new java.sql.Date(System.currentTimeMillis());
 
@@ -58,14 +54,6 @@ public class Postagem {
 
 	public void setConteudoPostagem(String conteudoPostagem) {
 		this.conteudoPostagem = conteudoPostagem;
-	}
-
-	public String getConteudo() {
-		return conteudo;
-	}
-
-	public void setConteudo(String conteudo) {
-		this.conteudo = conteudo;
 	}
 
 	public Date getCriadoEm() {
