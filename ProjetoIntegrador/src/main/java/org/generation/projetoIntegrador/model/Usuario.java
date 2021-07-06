@@ -86,15 +86,15 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-    public String getTipoUsuario() {
-        return tipoUsuario;
-    }
+	public String getTipoUsuario() {
+		return tipoUsuario;
+	}
 
-    public void setTipoUsuario(String pfSaude) {
-        this.tipoUsuario = tipoUsuario;
-    }
+	public void setTipoUsuario(String tipoUsuario) {
+		this.tipoUsuario = tipoUsuario;
+	}
 
-    public Integer getNumRegistro() {
+	public Integer getNumRegistro() {
 		return numRegistro;
 	}
 
