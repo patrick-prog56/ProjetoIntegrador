@@ -30,19 +30,19 @@ public class Usuario {
 	private String senha;
 
 	@NotNull
-	private String pfSaude;
+	private String tipoUsuario;
 
 	private Integer numRegistro;
 
 	
 	public Usuario() {}
 	
-	public Usuario(String nome, String usuario, String email, String senha, String pfSaude, Integer numRegistro) {
+	public Usuario(String nome, String usuario, String email, String senha, String tipoUsuario, Integer numRegistro) {
 		this.nome = nome;
 		this.usuario = usuario;
 		this.email = email;
 		this.senha = senha;
-		this.pfSaude = pfSaude;
+		this.tipoUsuario = tipoUsuario;
 		this.numRegistro = numRegistro;
 	}
 
@@ -86,15 +86,15 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-    public String getPfSaude() {
-        return pfSaude;
-    }
+	public String getTipoUsuario() {
+		return tipoUsuario;
+	}
 
-    public void setPfSaude(String pfSaude) {
-        this.pfSaude = pfSaude;
-    }
+	public void setTipoUsuario(String tipoUsuario) {
+		this.tipoUsuario = tipoUsuario;
+	}
 
-    public Integer getNumRegistro() {
+	public Integer getNumRegistro() {
 		return numRegistro;
 	}
 
