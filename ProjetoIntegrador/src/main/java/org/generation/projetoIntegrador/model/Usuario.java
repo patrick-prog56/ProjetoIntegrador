@@ -91,7 +91,7 @@ public class Usuario {
     }
 
     public void setTipoUsuario(String pfSaude) {
-        this.tipoUsuario = pfSaude;
+        this.tipoUsuario = tipoUsuario;
     }
 
     public Integer getNumRegistro() {
