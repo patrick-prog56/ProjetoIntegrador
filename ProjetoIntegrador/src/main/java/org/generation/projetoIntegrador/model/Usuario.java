@@ -34,7 +34,6 @@ public class Usuario {
 
 	private Integer numRegistro;
 
-	
 	public Usuario() {}
 	
 	public Usuario(String nome, String usuario, String email, String senha, String tipoUsuario, Integer numRegistro) {
