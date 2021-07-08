@@ -1,9 +1,12 @@
 package org.generation.projetoIntegrador.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Entity
 @Table(name = "tb_usuario")
@@ -34,16 +37,9 @@ public class Usuario {
 
 	private Integer numRegistro;
 
-	public Usuario() {}
-	
-	public Usuario(String nome, String usuario, String email, String senha, String tipoUsuario, Integer numRegistro) {
-		this.nome = nome;
-		this.usuario = usuario;
-		this.email = email;
-		this.senha = senha;
-		this.tipoUsuario = tipoUsuario;
-		this.numRegistro = numRegistro;
-	}
+	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
+	@JsonIgnoreProperties("usuario")
+	private List<Postagem> postagem;
 
 	public long getId() {
 		return id;
