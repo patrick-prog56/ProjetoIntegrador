@@ -24,7 +24,7 @@ public class Postagem {
 	private long id;
 
 	@NotNull
-	@Size(min = 5, max = 100)
+	@Size(min = 5, max = 5000)
 	private String conteudoPostagem;
 
 	@Temporal(TemporalType.TIMESTAMP)
